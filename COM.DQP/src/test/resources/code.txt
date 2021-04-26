@@ -1,0 +1,5 @@
+//div[@title='clone']//preceding-sibling::div//following-sibling::span//following-sibling::span//fa-icon//*[local-name()='svg' and @data-icon='edit']/*[local-name()='path']
+
+ wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[3]/button[1]")));
+	 
+	 profileClick.click(); }
