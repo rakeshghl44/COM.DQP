@@ -1,9 +1,8 @@
 package com.dqp.testcases;
 
 import org.testng.annotations.Test;
-
 import com.dqp.base.TestBase;
-import com.dqp.pages.CreateMeasurePage;
+import com.dqp.pages.CloneMeasurePage;
 import com.dqp.pages.HomePage;
 import com.dqp.pages.LoginPage;
 
@@ -15,7 +14,7 @@ public class CloneMeasureTestPage extends TestBase{
 	
 	LoginPage loginpage;
 	HomePage homepage;
-	CreateMeasurePage createmeasurepage; 
+	CloneMeasurePage clonemeasurePage; 
 	
 	public CloneMeasureTestPage() {
 		super();
@@ -28,78 +27,34 @@ public class CloneMeasureTestPage extends TestBase{
 	loginpage = new LoginPage();
 	homepage = new LoginPage().login(prop.getProperty("username"), prop.getProperty("password"));
 	 Thread.sleep(20000);
-	createmeasurepage = new CreateMeasurePage();
+	 clonemeasurePage = new CloneMeasurePage();
 	
-	}
-  
-  @Test (priority = 0 , enabled = false)
-  public void verifyMeasureTab() throws InterruptedException {
-	  
-	  
-	  Thread.sleep(10000);
-	  createmeasurepage.validateMeasureTab();
-	  	Thread.sleep(10000);
-  }
-  
-	 @Test(priority = 1, enabled = false) 
-	 public void verifyCreateMeasure() throws InterruptedException { 
-		 
-		 Thread.sleep(6000);
-		 verifyMeasureTab();
-		 
-		 Thread.sleep(7000);
-	 
-		 createmeasurepage.validateCreateMeasure(); 
-		 
-		 Thread.sleep(8000);
-		 
-	 }
-	 @Test(priority = 2, enabled = false) 
-	 public void verifyMesureType() throws InterruptedException { 
-		 
-		 verifyMeasureTab();
-	 
-		 verifyCreateMeasure(); 
-		 
-		 Thread.sleep(2000);
-		 
-		 createmeasurepage.validateMesureType();
-		 
-	 }
-	 
+	}  
+  	 
 	 @Test(priority = 0) 
-	 public void verifyMesureData() throws InterruptedException { 
+	 public void verifyMesureData() throws InterruptedException { 		
 		 
-		 
-		
-		 
-		 createmeasurepage.validateMeasureTab();  Thread.sleep(7000);
-	 
-		 createmeasurepage.validateCreateMeasure();  Thread.sleep(5000);
-		 
-		 Thread.sleep(4000);
-		 		 
-		 createmeasurepage.validateMesureType();Thread.sleep(8000);
-		 
-		 createmeasurepage.validateMesureName(); Thread.sleep(5000);
-		 createmeasurepage.validateOrganization(); Thread.sleep(5000);
-		 createmeasurepage.validateNextButton(); Thread.sleep(9000);
-		 createmeasurepage.validateDatasource(); Thread.sleep(5000);
-		 createmeasurepage.validateSelectsource(); Thread.sleep(5000);
-		 createmeasurepage.validateDatabase(); Thread.sleep(5000);
-		 createmeasurepage.validateSelectdatabase(); Thread.sleep(5000);
-		 createmeasurepage.validateTabel(); Thread.sleep(5000);
-		 createmeasurepage.validateSelecttable(); Thread.sleep(5000);
+		 clonemeasurePage.validateMeasureTab();  Thread.sleep(9000);		 
+		 clonemeasurePage.validateCloneMeasure(); Thread.sleep(7000);
+		 clonemeasurePage.validateMesureName(); Thread.sleep(5000);
+		 clonemeasurePage.validateOrganization(); Thread.sleep(5000);
+		 clonemeasurePage.validateNextButton(); Thread.sleep(9000);
+		 clonemeasurePage.validateDatasource(); Thread.sleep(5000);
+		 clonemeasurePage.validateSelectsource(); Thread.sleep(5000);
+		 clonemeasurePage.validateDatabase(); Thread.sleep(5000);
+		 clonemeasurePage.validateSelectdatabase(); Thread.sleep(5000);
+		 clonemeasurePage.validateTabel(); Thread.sleep(5000);
+		 clonemeasurePage.validateSelecttable(); Thread.sleep(5000);
 		 
 		 JavascriptExecutor js = (JavascriptExecutor) driver;
-			js.executeScript("window.scrollBy(0,600)", "");
+			js.executeScript("window.scrollBy(0,1000)", "");
 
-		 createmeasurepage.validateaddRuleButton(); Thread.sleep(5000);
-		 createmeasurepage.validateSelectcolumn(); Thread.sleep(5000);
-		 createmeasurepage.validateSelectcolumnvalue(); Thread.sleep(5000);
-		 createmeasurepage.validateSourcenextbutton(); Thread.sleep(5000);
-		 createmeasurepage.validateSubmitButton(); Thread.sleep(9000);
-		 createmeasurepage.validateSuccessfulPopup(); Thread.sleep(5000);
+		clonemeasurePage.validateaddRuleButton(); Thread.sleep(5000);
+		clonemeasurePage.validateSelectcolumn(); Thread.sleep(5000);
+		clonemeasurePage.validateSelectcolumnvalue(); Thread.sleep(5000);
+		clonemeasurePage.validateSourcenextbutton(); Thread.sleep(5000);
+		clonemeasurePage.validateSubmitButton(); Thread.sleep(9000);
+		clonemeasurePage.validateSuccessfulPopup(); Thread.sleep(5000);
 		 		 
 	 }
 	 	 

@@ -25,7 +25,7 @@ public class CreateJobPage extends TestBase{
 	@FindBy(name = "job_name")  //No required 
 	WebElement jobname;			
 	
-	@FindBy(className = "ng-arrow-wrapper")   //measure name drop-down
+	@FindBy(xpath = "//ng-select[@bindvalue='name']")   //measure name drop-down
 	WebElement measurename;
 
 	@FindBy(xpath = "//span[contains(text(),'testing_991')]")  // select measure name

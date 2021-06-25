@@ -21,7 +21,7 @@ public class TestBase {
 		try {
 			prop = new Properties();
 			
-			FileInputStream fip = new FileInputStream("C:\\Users\\RakeshGohel\\eclipse-workspace\\COM.DQP\\src\\main\\java\\com\\dqp\\config\\config.properties");
+			FileInputStream fip = new FileInputStream("C:\\Users\\RakeshGohel\\git\\COM.DQP\\COM.DQP\\src\\main\\java\\com\\dqp\\config\\config.properties");
 			prop.load(fip);
 			}
 		catch (FileNotFoundException fnfe) {

@@ -83,11 +83,11 @@ public class CloneMeasurePage extends TestBase{
 		Thread.sleep(2000); }
 	
 	public void validateMesureName() throws InterruptedException {
-		measurename.sendKeys("testing_991"); 
+		measurename.sendKeys("testing_9912"); 
 		Thread.sleep(4000); }
 	
 	public void validateOrganization() throws InterruptedException {
-		organization.sendKeys("testing_991");
+		organization.sendKeys("testing_9912");
 		Thread.sleep(4000); }	
 	
 	public void validateNextButton() throws InterruptedException {

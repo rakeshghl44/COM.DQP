@@ -39,31 +39,7 @@ public class CreateJobsTestPage extends TestBase{
 	  	Thread.sleep(10000);
   }
  
-	 @Test(priority = 1, enabled = false) 
-	 public void verifyCreateJobs() throws InterruptedException { 
-		 
-		 Thread.sleep(6000);
-		 verifyJobsTab();
-		 
-		 Thread.sleep(7000);
-	 
-		 createjobpage.validateCreateJobs(); 
-		 
-		 Thread.sleep(8000);		 
-	 }
-	 
-	 @Test(priority = 2, enabled = false) 
-	 public void verifyMesureType() throws InterruptedException { 
-		 
-		 verifyJobsTab();
-	 
-		 verifyCreateJobs(); 
-		 
-		 Thread.sleep(2000);
-		 
-		// createmeasurepage.validateMesureType();
-		 
-	 }
+	
 	 
 	 @Test(priority = 0) 
 	 public void verifyJobData() throws InterruptedException { 
@@ -72,8 +48,7 @@ public class CreateJobsTestPage extends TestBase{
 	 
 		 createjobpage.validateCreateJobs();  Thread.sleep(7000);
 		 
-		 createjobpage.validateMesureName();
-		 Thread.sleep(6000);
+		 createjobpage.validateMesureName(); Thread.sleep(6000);
 		 createjobpage.validateSelectMesureName(); Thread.sleep(5000);
 		 createjobpage.validateCronExpression(); Thread.sleep(5000);
 		 createjobpage.validateSelectCronExpression(); Thread.sleep(5000);

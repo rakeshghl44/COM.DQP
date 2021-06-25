@@ -16,10 +16,10 @@ public class CreateMeasurePage extends TestBase{
 	@FindBy(xpath = "//a[contains(text(),'Measures')]")
 	WebElement measureTab;
 	
-	@FindBy(xpath = "//span[contains(text(),'Create')]")
+	@FindBy(xpath = "//button[@routerlink='../create']//*[@data-icon='plus']")
 	WebElement createbutton;
 	
-	@FindBy(xpath = "//h4[contains(text(),'COMPLETENESS')]")
+	@FindBy(xpath = "//*[@class='card-title mb-0' and contains(text(),'COMPLETENESS')]")
 	WebElement selectmeasure;
 	
 	@FindBy(name = "prName")
@@ -56,7 +56,7 @@ public class CreateMeasurePage extends TestBase{
 	WebElement selectcolumn;
 	
 
-	@FindBy(xpath = "//input[@id='item-6']")
+	@FindBy(id = "item-6")
 	WebElement selectcolumnvalue;
 	
 	@FindBy(xpath = "//button[contains(text(),'Next')]")
